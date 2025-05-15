@@ -1,66 +1,66 @@
 {
-  "expo": {
-    "name": "expo-alternate-app-icons-example",
-    "slug": "expo-alternate-app-icons-example",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": ["**/*"],
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "expo.modules.alternateappicons.example"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/icon-foreground.png",
-        "backgroundColor": "#001413"
-      },
-      "package": "expo.modules.alternateappicons.example"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "../app.plugin.js",
-        [
-          {
-            "name": "IconA",
-            "ios": {
-              "light": "./assets/icon-a.png",
-              "dark": "./assets/icon-b.png",
-              "tinted": "./assets/icon-c.png"
+    "expo": {
+        "name": "expo-alternate-app-icons-example",
+        "slug": "expo-alternate-app-icons-example",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "assetBundlePatterns": ["**/*"],
+        "newArchEnabled": true,
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "expo.modules.expoalternateicons.example"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/icon-foreground.png",
+                "backgroundColor": "#001413"
             },
-            "android": {
-              "foregroundImage": "./assets/icon-a-foreground.png",
-              "backgroundColor": "#001413"
-            }
-          },
-          {
-            "name": "IconB",
-            "ios": "./assets/icon-b.png",
-            "android": {
-              "foregroundImage": "./assets/icon-b-foreground.png",
-              "backgroundColor": "#001413"
-            }
-          },
-          {
-            "name": "IconC",
-            "ios": "./assets/icon-c.png",
-            "android": {
-              "foregroundImage": "./assets/icon-c-foreground.png",
-              "backgroundColor": "#001413"
-            }
-          }
+            "package": "expo.modules.expoalternateicons.example"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "plugins": [
+            [
+                "../app.plugin.js",
+                [
+                    {
+                        "name": "IconA",
+                        "ios": {
+                            "light": "./assets/icon-a.png",
+                            "dark": "./assets/icon-b.png",
+                            "tinted": "./assets/icon-c.png"
+                        },
+                        "android": {
+                            "foregroundImage": "./assets/icon-a-foreground.png",
+                            "backgroundColor": "#001413"
+                        }
+                    },
+                    {
+                        "name": "IconB",
+                        "ios": "./assets/icon-b.png",
+                        "android": {
+                            "foregroundImage": "./assets/icon-b-foreground.png",
+                            "backgroundColor": "#001413"
+                        }
+                    },
+                    {
+                        "name": "IconC",
+                        "ios": "./assets/icon-c.png",
+                        "android": {
+                            "foregroundImage": "./assets/icon-c-foreground.png",
+                            "backgroundColor": "#001413"
+                        }
+                    }
+                ]
+            ]
         ]
-      ]
-    ]
-  }
+    }
 }

@@ -1,0 +1,1 @@
+{"root":["./src/stringutils.ts","./src/generateadaptiveicon.ts","./src/generatetypeiconsfile.ts","./src/generateuniversalicon.ts","./src/index.ts","./src/types.ts","./src/withadaptiveiconsgenerator.ts","./src/withalternateappiconsgenerator.ts","./src/withandroidmanifestupdate.ts","./src/withxcodeprojectupdate.ts","./src/writecontentsjson.ts"],"version":"5.8.3"}

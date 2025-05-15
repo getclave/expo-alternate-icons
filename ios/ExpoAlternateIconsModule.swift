@@ -1,10 +1,10 @@
 import ExpoModulesCore
 
-public class ExpoAlternateAppIconsModule: Module {
+public class ExpoAlternateIconsModule: Module {
     private var supportsAlternateIcons = UIApplication.shared.supportsAlternateIcons;
 
     public func definition() -> ModuleDefinition {
-        Name("ExpoAlternateAppIcons")
+        Name("ExpoAlternateIcons")
 
         Constants({
           return [
@@ -12,15 +12,15 @@ public class ExpoAlternateAppIconsModule: Module {
           ]
         })
 
-        AsyncFunction("setAlternateAppIcon", setAlternateAppIcon)
-        Function("getAppIconName", getAppIconName)
+        AsyncFunction("setIcon", setIcon)
+        Function("getIconName", getIconName)
     }
 
-    private func getAppIconName() -> String? {
+    private func getIconName() -> String? {
         return UIApplication.shared.alternateIconName;
     }
 
-    private func setAlternateAppIcon(icon: String?, promise: Promise) -> Void {
+    private func setIcon(icon: String?, promise: Promise) -> Void {
         Task { @MainActor in
             do {
                 try await UIApplication.shared.setAlternateIconName(icon);

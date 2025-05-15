@@ -1,4 +1,4 @@
-package expo.modules.alternateappicons
+package expo.modules.expoalternateicons
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
@@ -10,19 +10,19 @@ import kotlinx.coroutines.withContext
 
 const val MAIN_ACTIVITY_NAME = "MainActivity"
 
-class ExpoAlternateAppIconsModule : Module() {
+class ExpoAlternateIconsModule : Module() {
   override fun definition() = ModuleDefinition {
-    Name("ExpoAlternateAppIcons")
+    Name("ExpoAlternateIcons")
 
     Constants(
       "supportsAlternateIcons" to true
     )
 
-    Function("getAppIconName", this@ExpoAlternateAppIconsModule::getAppIconName)
-    AsyncFunction("setAlternateAppIcon").Coroutine(this@ExpoAlternateAppIconsModule::setAlternateAppIcon)
+    Function("getIconName", this@ExpoAlternateIconsModule::getIconName)
+    AsyncFunction("setIcon").Coroutine(this@ExpoAlternateIconsModule::setIcon)
   }
 
-  private fun getAppIconName(): String? {
+  private fun getIconName(): String? {
     val currentActivityComponent = appContext.activityProvider?.currentActivity?.componentName ?: return null
 
     return try {
@@ -32,7 +32,7 @@ class ExpoAlternateAppIconsModule : Module() {
     }
   }
 
-  private suspend fun setAlternateAppIcon(icon: String?): String? = withContext(Dispatchers.Main) {
+  private suspend fun setIcon(icon: String?): String? = withContext(Dispatchers.Main) {
     val currentActivityComponent = appContext.activityProvider!!.currentActivity!!.componentName
 
     val currentIconName = retrieveIconNameFromComponent(currentActivityComponent)

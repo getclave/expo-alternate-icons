@@ -1,7 +1,5 @@
-import { type AlternateAppIcons } from './AlternateAppIconsType';
-import ExpoAlternateAppIconsModule from './ExpoAlternateAppIconsModule';
-
-export { type AlternateAppIcons } from './AlternateAppIconsType';
+import type { AlternateIcons } from './types';
+import ExpoAlternateIconsModule from './ExpoAlternateIconsModule';
 
 /**
  * A boolean value indicating whether the current device supports alternate app icons.
@@ -16,7 +14,8 @@ export { type AlternateAppIcons } from './AlternateAppIconsType';
  *   console.log('Alternate app icons are not supported on this device.');
  * }
  */
-export const supportsAlternateIcons: boolean = ExpoAlternateAppIconsModule.supportsAlternateIcons;
+export const supportsAlternateIcons: boolean =
+    ExpoAlternateIconsModule.supportsAlternateIcons;
 
 /**
  * Sets the alternate app icon for the application.
@@ -27,14 +26,16 @@ export const supportsAlternateIcons: boolean = ExpoAlternateAppIconsModule.suppo
  *
  * @example
  * // Set an alternate app icon named 'icon2'.
- * const result = await setAlternateAppIcon('icon2');
+ * const result = await setIcon('icon2');
  *
  * // Reset to the default app icon.
- * const resetResult = await setAlternateAppIcon(null);
+ * const resetResult = await setIcon(null);
  */
 
-export async function setAlternateAppIcon(name: AlternateAppIcons | null): Promise<string | null> {
-  return ExpoAlternateAppIconsModule.setAlternateAppIcon(name);
+export async function setIcon(
+    name: AlternateIcons | null,
+): Promise<string | null> {
+    return ExpoAlternateIconsModule.setIcon(name);
 }
 
 /**
@@ -44,11 +45,11 @@ export async function setAlternateAppIcon(name: AlternateAppIcons | null): Promi
  *
  * @example
  * // Get the name of the currently active app icon.
- * const iconName = getAppIconName();
+ * const iconName = getIconName();
  * console.log(`The active app icon is: ${iconName}`);
  */
-export function getAppIconName(): AlternateAppIcons | null {
-  return ExpoAlternateAppIconsModule.getAppIconName();
+export function getIconName(): AlternateIcons | null {
+    return ExpoAlternateIconsModule.getIconName();
 }
 
 /**
@@ -57,6 +58,8 @@ export function getAppIconName(): AlternateAppIcons | null {
  * @returns {Promise<void>}
  * @throws {Error} Throws an error if there is an issue with setting the alternate app icon.
  */
-export async function resetAppIcon(): Promise<void> {
-  await setAlternateAppIcon(null);
+export async function resetIcon(): Promise<void> {
+    await setIcon(null);
 }
+
+export { AlternateIcons };
