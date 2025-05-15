@@ -17,6 +17,7 @@
     ],
     "main": "build/index.js",
     "types": "build/index.d.ts",
+    "private": false,
     "scripts": {
         "build": "expo-module build",
         "clean": "expo-module clean",
