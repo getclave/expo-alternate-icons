@@ -1,6 +1,6 @@
 {
     "name": "@getclave/expo-alternate-icons",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Provides functions that let you change the app icon",
     "repository": "https://github.com/getclave/expo-alternate-icons",
     "bugs": {
