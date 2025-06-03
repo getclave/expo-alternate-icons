@@ -27,17 +27,18 @@
         "expo-module": "expo-module",
         "bump-patch": "npm version patch",
         "bump-minor": "npm version minor",
-        "bump-major": "npm version major"
+        "bump-major": "npm version major",
+        "clear": "rm -rf build && rm -rf node_modules && rm -rf package-lock.json && rm -rf yarn.lock"
     },
     "devDependencies": {
         "prettier": "3.5.3",
-        "react": "18.3.1",
-        "react-native": "0.76.9",
-        "expo": "~52.0.46",
-        "expo-module-scripts": "~4.0.3",
-        "expo-modules-core": "2.2.3",
-        "@types/react": "~18.3.12",
-        "typescript": "5.7.2"
+        "react": "19.0.0",
+        "react-native": "0.79.2",
+        "expo": "~53.0.8",
+        "expo-module-scripts": "^4.1.6",
+        "expo-modules-core": "2.3.13",
+        "@types/react": "~19.0.10",
+        "typescript": "~5.8.3"
     },
     "peerDependencies": {
         "expo": ">=52",
@@ -45,8 +46,8 @@
         "react-native": "*"
     },
     "dependencies": {
-        "expo": "~52.0.46",
-        "react": "18.3.1",
-        "react-native": "0.76.9"
+        "expo": "~53.0.8",
+        "react": "19.0.0",
+        "react-native": "0.79.2"
     }
 }
